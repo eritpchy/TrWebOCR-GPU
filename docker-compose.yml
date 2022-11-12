@@ -1,0 +1,20 @@
+version: '3.3'
+services:
+    trwebocr-gpu:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: trwebocr-gpu
+      ports:
+          - '18089:8089'
+      restart: always
+      logging:
+          options:
+              max-size: 1g
+      deploy:
+        resources:
+          reservations:
+            devices:
+              - driver: nvidia
+                count: 1
+                capabilities: [gpu]

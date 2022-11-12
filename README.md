@@ -59,6 +59,10 @@ tr 2.3.0 https://github.com/myhub/tr
 Server is running: http://192.168.31.95:8089
 Now version is: cpu
 ```   
+### Docker Compose部署GPU
+```shell script
+docker compose up -d
+```
 
 ### Docker部署  
 使用 Dockerfile 构建 或者直接 Pull镜像  

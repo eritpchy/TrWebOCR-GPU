@@ -55,8 +55,8 @@ if __name__ == "__main__":
     app = make_app()
 
     server = tornado.httpserver.HTTPServer(app)
-    # server.listen(port)
-    server.bind(port)
+    server.listen(port, "0.0.0.0")
+    #server.bind(port)
     server.start(1)
     print(f'Server is running: http://{host_ip()}:{port}')
     print(f'Now version is: {manage_running_platform.get_run_version()}')
